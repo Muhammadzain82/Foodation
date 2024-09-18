@@ -37,8 +37,8 @@ export default function Dashboard() {
   
   // Separate goals into unfinished and completed
   const unfinishedGoals = [
-    { title: 'Donate a basket of fruit', progress: 40, target: +200 },
-    { title: 'Donate a basket of fruit', progress: 40, target: +200 },
+    { title: 'Donate a basket of fruit',description: '2 apples, 4 bananas...', enrolled: '22/40', points: +200 },
+    { title: 'Donate a basket of fruit',description: '2 apples, 4 bananas...', enrolled: '22/40', points: +200 },
   ]
 
   const completedGoals = [
@@ -187,9 +187,9 @@ export default function Dashboard() {
                 <div value={(goal.enrolled / goal.total) * 100} className="h-2 mt-2" />
                 <p className="text-xs text-gray-500 mt-1">{goal.enrolled}/{goal.total} enrolled</p>
               </div>
-              <div className="flex flex-col items-end">
-                <span className="text-green-500 font-semibold mb-2">+${goal.amount}</span>
-                <button className="bg-green-500 hover:bg-green-600 text-white">
+              <div className="flex items-center space-x-4">
+               <div className="text-green-500">+{goal.points}</div>
+                <button className="px-4 py-2 text-white bg-green-500 rounded hover:bg-green-600">
                   Enroll Now
                 </button>
               </div>
