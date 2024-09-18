@@ -136,8 +136,7 @@ export default function Completed() {
                       </div>
                     </div>
                     <div className="flex items-center space-x-4">
-                      <div className="px-3 py-1 text-green-700 bg-green-100 rounded-full text-sm">
-                        Earned +{goal.points}
+                      <div className="px-3 py-1 text-green-700 bg-green-100 rounded-full text-sm">Earned +{goal.points}
                       </div>
                     </div>
                   </div>

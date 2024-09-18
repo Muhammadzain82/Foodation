@@ -212,13 +212,12 @@ export default function DashboardOrg() {
                 <p className="text-sm text-gray-500">{goal.details}</p>
                 <div className="flex items-center mt-2">
                   <div value={(goal.enrolled / goal.total) * 100} className="h-2 flex-grow mr-4" />
-                  <span className="text-xs text-gray-500 mr-72">{goal.enrolled}/{goal.total} enrolled</span>
+                  <span className="text-xs text-gray-500 mr-72 w-[120px]">{goal.enrolled}/{goal.total} enrolled</span>
                 </div>
               </div>
               <div className="flex items-center space-x-4">
-                <span className="text-green-500 font-semibold">+200{goal.amount}
-                <div><Image src="/coin.png" width={40} height={40}/></div>
-                </span>
+              <div><Image src="/coin.png" width={300} height={300}/></div>
+                <span className="text-green-500 font-semibold">+200{goal.amount}</span>
               </div>
             </div>
           ))}
