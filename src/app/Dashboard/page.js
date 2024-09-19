@@ -4,7 +4,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 import { Tabs, TabsList, TabsTrigger, TabsContent } from '@radix-ui/react-tabs';
 import Nextpage from '../Leaderboard/page'
-import GoalsDashboard from '../Goals/page'
+import GoalsDashboard from '../Goals/[page]'
 import MyReceiversDashboard from '../Listing/page'
 
 export default function Dashboard() {
