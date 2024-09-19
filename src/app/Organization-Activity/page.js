@@ -1,7 +1,6 @@
 import Link from 'next/link'
 import Image from 'next/image'
-import { Search, Bell, ChevronDown } from 'lucide-react'
-import { optimizeImage } from 'next/dist/server/image-optimizer'
+import { Search} from 'lucide-react'
 
 const recentActivity = [
   { id: 1, donorName: 'Alan Coin', foodList: 'Biryani', date: '04 April, 2021 | 04:00 pm', points: 44 },

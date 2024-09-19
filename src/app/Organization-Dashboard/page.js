@@ -2,8 +2,6 @@
 import { useState } from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
-import Dashboard from '../Dashboard/page'
-import { Bell, ChevronDown, MapPin } from 'lucide-react'
 
 const stats = [
   { title: "Today's Receiving", value: '7,222', change: '+5% from yesterday', color: 'bg-blue-100' },
