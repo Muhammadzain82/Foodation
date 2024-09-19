@@ -19,9 +19,9 @@ const leaderboardData = [
 
 export default function GoalsDashboard() {
   return (
-    <div className="flex min-h-screen bg-gray-100">
+    <div className="flex min-h-screen bg-white">
       {/* Sidebar */}
-      <div className="w-64 bg-white shadow-md">
+      <div className="w-64 bg-white">
         <div className="p-4">
           <div className="flex items-center space-x-2">
             <div><Image src="/image.png" width={40} height={40}/></div>
@@ -52,10 +52,13 @@ export default function GoalsDashboard() {
             <span className="mr-2">◎</span>
             Goals
           </a>
+
+          <div className="mt-6">
           <a href="#" className="flex items-center px-4 py-2 text-gray-600 hover:bg-gray-200">
             <span className="mr-2">⚙</span>
             Settings
           </a>
+          </div>
           <a href="#" className="flex items-center px-4 py-2 text-gray-600 hover:bg-gray-200">
             <span className="mr-2">↪</span>
             Sign Out

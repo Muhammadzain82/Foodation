@@ -53,10 +53,12 @@ export default function GoalsDashboard() {
             <span className="mr-2">◎</span>
             Goals
           </a>
+          <div className="mt-6">
           <a href="#" className="flex items-center px-4 py-2 text-gray-600 hover:bg-gray-200">
             <span className="mr-2">⚙</span>
             Settings
           </a>
+          </div>
           <a href="#" className="flex items-center px-4 py-2 text-gray-600 hover:bg-gray-200">
             <span className="mr-2">↪</span>
             Sign Out

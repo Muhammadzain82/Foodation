@@ -1,5 +1,5 @@
 import Image from 'next/image'
-import { Search, ChevronDown, Bell } from 'lucide-react'
+import { Search,} from 'lucide-react'
 
 const leaderboardData = [
   { rank: 1, name: 'Alan Coin', donations: '34.5k', points: 44 },

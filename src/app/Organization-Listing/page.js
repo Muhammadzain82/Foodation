@@ -25,21 +25,20 @@ const recentActivity = [
 
 export default function UserListingDashboard() {
   return (
-    <div className="flex min-h-screen bg-white">
+    <div className="flex flex-col min-h-screen bg-white lg:flex-row">
       {/* Sidebar */}
-      <div className="w-64 bg-white shadow-md">
+      <div className="w-full lg:w-64 bg-white shadow-md">
         <div className="p-4">
           <div className="flex items-center space-x-2">
-            <div><Image src="/image.png" width={40} height={40}/></div>
+            <Image src="/image.png" width={40} height={40} />
             <span className="text-xl font-semibold text-green-500">Foodation</span>
           </div>
         </div>
-        <center><button className="w-half mt-4 px-4 py-2 bg-green-500 text-white rounded">
-          <Link href="/Create-Goal">
-           Create Goal
-          </Link> 
-         </button>
-        </center>  
+        <center>
+          <button className="mt-4 px-4 py-2 bg-green-500 text-white rounded">
+            <Link href="/Create-Goal">Create Goal</Link>
+          </button>
+        </center>
         <nav className="mt-8">
           <a href="/Organization-Dashboard" className="flex items-center px-4 py-2 text-gray-600 hover:bg-gray-200">
             <span className="mr-2">◯</span>
@@ -57,10 +56,12 @@ export default function UserListingDashboard() {
             <span className="mr-2">◎</span>
             Goals
           </a>
-          <a href="#" className="flex items-center px-4 py-2 text-gray-600 hover:bg-gray-200">
-            <span className="mr-2">⚙</span>
-            Settings
-          </a>
+          <div className="mt-6">
+            <a href="#" className="flex items-center px-4 py-2 text-gray-600 hover:bg-gray-200">
+              <span className="mr-2">⚙</span>
+              Settings
+            </a>
+          </div>
           <a href="#" className="flex items-center px-4 py-2 text-gray-600 hover:bg-gray-200">
             <span className="mr-2">↪</span>
             Sign Out
@@ -78,18 +79,18 @@ export default function UserListingDashboard() {
               <button className="px-4 py-2 text-white bg-green-500 rounded hover:bg-green-600">
                 Start Receiving
               </button>
-              <Image src="/Ring.png" width={40} height={40}/>
+              <Image src="/Ring.png" width={40} height={40} />
               <div className="flex items-center space-x-2">
-                <div><Image src="/logo.png" width={200} height={200}/></div>
+                <Image src="/logo.png" width={200} height={200} />
               </div>
             </div>
           </div>
         </header>
 
         {/* Content */}
-        <main className="p-8 flex">
+        <main className="p-4 lg:p-8 flex flex-col lg:flex-row">
           {/* Donations List */}
-          <div className="flex-1 mr-8">
+          <div className="flex-1 mr-0 lg:mr-8 mb-4 lg:mb-0">
             <div className="flex items-center mb-6">
               <div className="relative flex-1">
                 <input
@@ -108,13 +109,11 @@ export default function UserListingDashboard() {
               {donationsList.map((donation) => (
                 <div key={donation.id} className="bg-white rounded-lg shadow-sm p-4">
                   <div className="flex items-start">
-                  <Image src="/Daal.png" width={300} height={300} className="mr-6" />
+                    <Image src="/Daal.png" width={300} height={300} className="mr-6" />
                     <div className="flex-1">
                       <div className="flex items-center justify-between">
                         <div className="flex items-center space-x-2">
-                          <div className="flex items-right space-x-6">
-                             <Image src="/profile.png" width={32} height={32}/>
-                          </div>
+                          <Image src="/profile.png" width={32} height={32} />
                           <div>
                             <h3 className="font-semibold text-black">{donation.donorName}</h3>
                             <p className="text-sm text-gray-500">{donation.time}</p>
@@ -134,8 +133,8 @@ export default function UserListingDashboard() {
             </div>
           </div>
 
-          {/* Sidebar */}
-          <div className="w-80">
+          {/* Sidebar (Leaderboard and Recent Activity) */}
+          <div className="w-full lg:w-80">
             {/* Leaderboard */}
             <div className="bg-white rounded-lg shadow-sm mb-8">
               <div className="p-6">
@@ -145,7 +144,7 @@ export default function UserListingDashboard() {
                     <div key={user.id} className="flex items-center justify-between">
                       <div className="flex items-center space-x-3">
                         <span className="font-semibold text-green-500">{index + 1}</span>
-                        <div><Image src="/Amirah.png" width={40} height="40"/></div>
+                        <Image src="/Amirah.png" width={40} height={40} />
                         <div>
                           <div className="font-semibold text-black">{user.name}</div>
                           <div className="text-sm text-gray-500">{user.donations}</div>
@@ -156,9 +155,7 @@ export default function UserListingDashboard() {
                   ))}
                 </div>
                 <button className="w-full text-center text-green-500 mt-4">
-                    <Link href="/Organization-Leaderboard">
-                     View All
-                    </Link>
+                  <Link href="/Organization-Leaderboard">View All</Link>
                 </button>
               </div>
             </div>
@@ -170,7 +167,7 @@ export default function UserListingDashboard() {
                 <div className="space-y-4">
                   {recentActivity.map((activity) => (
                     <div key={activity.id} className="flex items-center space-x-3">
-                      <div><Image src="/donor.png" width={40} height={40}/></div>
+                      <Image src="/donor.png" width={40} height={40} />
                       <div>
                         <div className="font-semibold text-black">{activity.name}</div>
                         <div className="text-sm text-gray-500">{activity.date}</div>
@@ -179,9 +176,7 @@ export default function UserListingDashboard() {
                   ))}
                 </div>
                 <button className="w-full text-center text-green-500 mt-4">
-                    <Link href="Organization-Activity">
-                     View All
-                    </Link> 
+                  <Link href="Organization-Activity">View All</Link>
                 </button>
               </div>
             </div>

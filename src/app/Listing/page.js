@@ -1,5 +1,5 @@
 import Image from 'next/image'
-import { Search, Bell, ChevronDown, Filter, MoreVertical } from 'lucide-react'
+import { Search, Filter, MoreVertical } from 'lucide-react'
 import Link from 'next/link'
 
 const donationsList = [

@@ -86,15 +86,15 @@ export default function DashboardOrg() {
             <span className="mr-2">◯</span>
             Dashboard
           </a>
-          <a href="Listing" className="flex items-center px-4 py-2 text-gray-600 hover:bg-green-500">
+          <a href="Organization-Listing" className="flex items-center px-4 py-2 text-gray-600 hover:bg-green-500">
             <span className="mr-2">≡</span>
             My Listing
           </a>
-          <a href="Recievers" className="flex items-center px-4 py-2 text-gray-600 hover:bg-green-500">
+          <a href="Organization-Donor" className="flex items-center px-4 py-2 text-gray-600 hover:bg-green-500">
             <span className="mr-2">⊙</span>
-            My Receivers
+            My Donor
           </a>
-          <a href="/Goals" className="flex items-center px-4 py-2 text-gray-600 hover:bg-green-500">
+          <a href="/Organization-Goals" className="flex items-center px-4 py-2 text-gray-600 hover:bg-green-500">
             <span className="mr-2">◎</span>
             My Goals
           </a>
@@ -158,7 +158,7 @@ export default function DashboardOrg() {
             ))}
             <div className="mt-6 text-center">
                 <button className="text-green-500 font-semibold flex items-center mx-auto">
-                    <Link href="/Leaderboard">
+                    <Link href="/Organization-Leaderboard">
                       View All
                     </Link>
                   <svg className="w-5 h-5 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
@@ -239,7 +239,7 @@ export default function DashboardOrg() {
             ))}
             <div className="mt-6 text-center">
                 <button className="text-green-500 font-semibold flex items-center mx-auto">
-                    <Link href="/Recent-Activity">
+                    <Link href="/Organization-Activity">
                      View All
                     </Link>
                   <svg className="w-5 h-5 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">

@@ -1,6 +1,5 @@
 import Image from 'next/image'
 import Link from 'next/link'
-import { Search, Bell, ChevronDown } from 'lucide-react'
 import { IMAGES_MANIFEST } from 'next/dist/shared/lib/constants'
 
 const goalsList = [
