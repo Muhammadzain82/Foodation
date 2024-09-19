@@ -1,6 +1,6 @@
 import Link from 'next/link'
 import Image from 'next/image'
-import { Search, Bell, ChevronDown} from 'lucide-react'
+import { Search} from 'lucide-react'
 
 const goalsList = [
   { id: 1, title: 'Donate a basket of fruit', enrolled: '2, apples, 4 bananas', points: 200 },
