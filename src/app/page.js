@@ -9,7 +9,7 @@ import Login from './Organization-login/page'
 import RepresentationChoice from './Main/page'
 import Activity from './Recent-Activity/page'
 import GoalsDashboard from './My-Goals/page'
-import Completed from './Completed-Goals/[page]'
+import Completed from './Completed-Goals/page'
 
 export default function Component() {
   const [showPassword, setShowPassword] = useState(false)
