@@ -4,7 +4,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 import { Tabs, TabsList, TabsTrigger, TabsContent } from '@radix-ui/react-tabs';
 import Nextpage from '../Leaderboard/page'
-import GoalsDashboard from '../Goals/[page]'
+import GoalsDashboard from '../Goals/page'
 import MyReceiversDashboard from '../Listing/page'
 
 export default function Dashboard() {
@@ -67,15 +67,15 @@ export default function Dashboard() {
             <span className="mr-2">◯</span>
             Dashboard
           </a>
-          <a href="Listing" className="flex items-center px-4 py-2 text-gray-600 hover:bg-green-500">
+          <a href="/Listing" className="flex items-center px-4 py-2 text-gray-600 hover:bg-green-500">
             <span className="mr-2">≡</span>
             My Listing
           </a>
-          <a href="Recievers" className="flex items-center px-4 py-2 text-gray-600 hover:bg-green-500">
+          <a href="/Recievers" className="flex items-center px-4 py-2 text-gray-600 hover:bg-green-500">
             <span className="mr-2">⊙</span>
             My Receivers
           </a>
-          <a href="/Goals" className="flex items-center px-4 py-2 text-gray-600 hover:bg-green-500">
+          <a href="/pages/Goals.js" className="flex items-center px-4 py-2 text-gray-600 hover:bg-green-500">
             <span className="mr-2">◎</span>
             My Goals
           </a>

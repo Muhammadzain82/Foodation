@@ -1,6 +1,7 @@
+"use client"
 import Image from 'next/image'
 import Link from 'next/link'
-import { IMAGES_MANIFEST } from 'next/dist/shared/lib/constants'
+import { Search } from 'lucide-react' // Correct import for the Search icon
 
 const goalsList = [
   { id: 1, title: 'Donate a basket of fruit', enrolled: '20/40', points: 200 },
@@ -31,38 +32,38 @@ export default function GoalsDashboard() {
       <div className="w-64 bg-white">
         <div className="p-4">
           <div className="flex items-center space-x-2">
-            <Image src="/image.png" width={32} height={32}/>
+            <Image src="/image.png" width={32} height={32} alt="Foodation Logo"/>
             <span className="text-xl font-semibold text-green-500">Foodation</span>
           </div>
         </div>
         <nav className="mt-8">
-          <a href="/Dashboard" className="flex items-center px-4 py-2 text-gray-600 hover:bg-green-500">
+          <Link href="/Dashboard" className="flex items-center px-4 py-2 text-gray-600 hover:bg-green-500">
             <span className="mr-2">◯</span>
             Dashboard
-          </a>
-          <a href="/Listing" className="flex items-center px-4 py-2 text-gray-600 hover:bg-green-500">
+          </Link>
+          <Link href="/Listing" className="flex items-center px-4 py-2 text-gray-600 hover:bg-green-500">
             <span className="mr-2">≡</span>
             My Listing
-          </a>
-          <a href="Recievers" className="flex items-center px-4 py-2 text-gray-600 hover:bg-green-500">
+          </Link>
+          <Link href="/Recievers" className="flex items-center px-4 py-2 text-gray-600 hover:bg-green-500">
             <span className="mr-2">⊙</span>
             My Receivers
-          </a>
-          <a href="Dashboard" className="flex items-center px-4 py-2 text-gray-700 bg-green-500">
+          </Link>
+          <Link href="/Goals" className="flex items-center px-4 py-2 text-gray-700 bg-green-500">
             <span className="mr-2">◎</span>
             My Goals
-          </a>
+          </Link>
 
           <div className="mt-6"> 
-            <a href="#" className="flex items-center px-4 py-2 text-gray-600 hover:bg-green-500">
-             <span className="mr-2">⚙</span>
-             Settings
-            </a>
+            <Link href="#" className="flex items-center px-4 py-2 text-gray-600 hover:bg-green-500">
+              <span className="mr-2">⚙</span>
+              Settings
+            </Link>
           </div>
-          <a href="#" className="flex items-center px-4 py-2 text-gray-600 hover:bg-green-500">
+          <Link href="#" className="flex items-center px-4 py-2 text-gray-600 hover:bg-green-500">
             <span className="mr-2">↪</span>
             Sign Out
-          </a>
+          </Link>
         </nav>
       </div>
 
@@ -76,11 +77,9 @@ export default function GoalsDashboard() {
               <button className="px-4 py-2 text-white bg-green-500 rounded hover:bg-green-600">
                 Start Donating
               </button>
-              <div><Image src="/coin.png" width={40} height={40}/></div>
+              <Image src="/coin.png" width={40} height={40} alt="Coin"/>
               <Image src="/Ring.png" alt="Notifications" width={40} height={40}/>  
-              <div className="flex items-center space-x-2">
-              <Image src="/logo.png" width={200} height={200}/>
-              </div>
+              <Image src="/logo.png" width={200} height={200} alt="Logo"/>
             </div>
           </div>
         </header>
@@ -100,34 +99,32 @@ export default function GoalsDashboard() {
                   <Search className="absolute left-3 top-2.5 w-5 h-5 text-gray-400" />
                 </div>
                 <div className="ml-4 flex items-center text-sm text-gray-500">
-                  Sort By <Image src="/sort.png" width={15} height={15}/>
+                  Sort By <Image src="/sort.png" width={15} height={15} alt="Sort Icon"/>
                 </div>
               </div>
               <h3 className="text-lg font-semibold text-black mb-6">Goals</h3>
               <div className="flex space-x-4 mb-6">
-                <button className="px-4 py-2 text-green-500 bg-green-100 rounded-full">
-                  <Link href="/Goals">
+                <Link href="/Goals">
+                  <button className="px-4 py-2 text-green-500 bg-green-100 rounded-full">
                     New Goals
-                  </Link>
-                </button>
-                <button className="px-4 py-2 text-gray-500 hover:bg-gray-100 rounded-full">
-                  <Link href="/My-Goals">
-                   My Goals
-                  </Link>
-                 </button>
-                <button className="px-4 py-2 text-gray-500 hover:bg-gray-100 rounded-full">
-                  <Link href="/Completed-Goals">
+                  </button>
+                </Link>
+                <Link href="/My-Goals">
+                  <button className="px-4 py-2 text-gray-500 hover:bg-gray-100 rounded-full">
+                    My Goals
+                  </button>
+                </Link>
+                <Link href="/Completed-Goals">
+                  <button className="px-4 py-2 text-gray-500 hover:bg-gray-100 rounded-full">
                     Completed Goals
-                  </Link>  
-                </button>
+                  </button>
+                </Link>
               </div>
               <div className="space-y-4">
                 {goalsList.map((goal) => (
                   <div key={goal.id} className="flex items-center justify-between p-4 border rounded-lg">
                     <div className="flex items-center space-x-4">
-                      <div>
-                        <Image src="/donor.png" width={40} height={40}/>
-                      </div>
+                      <Image src="/donor.png" width={40} height={40} alt="Donor"/>
                       <div>
                         <h3 className="font-semibold">{goal.title}</h3>
                         <div className="text-sm text-gray-500">{goal.enrolled} enrolled</div>
@@ -160,7 +157,7 @@ export default function GoalsDashboard() {
                       <div className="flex items-center space-x-3">
                         <span className="font-semibold">{index + 1}</span>
                         <div className="w-8 h-8 bg-yellow-500 rounded-full">
-                          <Image src="/Amirah.png" width={40} height={40}/>
+                          <Image src="/Amirah.png" width={40} height={40} alt="Amirah"/>
                         </div>
                         <div>
                           <div className="font-semibold text-black">{user.name}</div>
@@ -171,11 +168,11 @@ export default function GoalsDashboard() {
                     </div>
                   ))}
                 </div>
-                <button className="w-full text-center text-green-500 mt-4">
-                  <Link href="/Leaderboard"> 
-                   View All
-                  </Link>
-                </button>
+                <Link href="/Leaderboard">
+                  <button className="w-full text-center text-green-500 mt-4">
+                    View All
+                  </button>
+                </Link>
               </div>
             </div>
 
@@ -186,9 +183,7 @@ export default function GoalsDashboard() {
                 <div className="space-y-4">
                   {recentActivity.map((activity) => (
                     <div key={activity.id} className="flex items-center space-x-3 text-black">
-                      <div>
-                        <Image src="/donor.png" width={40} height={40}/>
-                      </div>
+                      <Image src="/donor.png" width={40} height={40} alt="Donor"/>
                       <div>
                         <div className="font-semibold">{activity.name}</div>
                         <div className="text-sm text-gray-500">{activity.date}</div>
@@ -196,11 +191,11 @@ export default function GoalsDashboard() {
                     </div>
                   ))}
                 </div>
-                <button className="w-full text-center text-green-500 mt-4">
-                  <Link href="/Recent-Activity">
-                   View All
-                  </Link>
-                </button>
+                <Link href="/Recent-Activity">
+                  <button className="w-full text-center text-green-500 mt-4">
+                    View All
+                  </button>
+                </Link>
               </div>
             </div>
           </div>
