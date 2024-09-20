@@ -1,7 +1,7 @@
 "use client"
 import Image from 'next/image'
 import Link from 'next/link'
-import { Search } from 'lucide-react' 
+import Search from 'path-to-search-component'; 
 
 const goalsList = [
   { id: 1, title: 'Donate a basket of fruit', enrolled: '20/40', points: 200 },

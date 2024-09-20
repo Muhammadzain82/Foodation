@@ -1,6 +1,6 @@
 import Image from 'next/image'
 import Link from 'next/link'
-import { Search } from 'lucide-react'
+import Search from 'path-to-search-component';
 
 const goalsList = [
   { id: 1, title: 'Donate a basket of fruit', enrolled: '20/40', points: 200 },
@@ -102,7 +102,7 @@ export default function Completed() {
                     placeholder="Search user"
                     className="w-full pl-10 pr-4 py-2 rounded-full bg-gray-100"
                   />
-                  <Search className="absolute left-3 top-2.5 w-5 h-5 text-gray-400" />
+                  {/* <Search className="absolute left-3 top-2.5 w-5 h-5 text-gray-400" /> */}
                 </div>
                 <div className="ml-4 flex items-center text-sm text-gray-500">
                   Sort By <Image src="/sort.png" width={15} height={15}/>
